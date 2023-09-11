@@ -4,7 +4,7 @@ Follow the dependency instructions and comments in each Perl script to execute a
 
 Step 0: filtering BAM files by corresponding VCF files, converting VCF files into BED maps
 
-Step 1: creating a table that provides detailed information on paired clustered mutations and the distances between them, specifically for mutations located on the same read and on different reads
+Step 1: creating a table that provides detailed information on paired clustered mutations and the distances between these paired mutations, specifically for mutations located on the same read and on different reads
 
 Step 2: creating a tabix indexes of trinucleotide positions in the reference genome
 
