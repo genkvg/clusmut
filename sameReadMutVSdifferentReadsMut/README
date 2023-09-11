@@ -1,1 +1,13 @@
+The analysis consists of 5 steps. To perform analysis, the user should prepare filtered VCF files using the alignability map of the human genome from the UCSC browser (https://genome.ucsc.edu/cgi-bin/hgFileUi?db=hg19&g=wgEncodeMapability) with the length of K-mer equal to 75 bp (wgEncodeCrgMapabilityAlign75mer).
 
+Follow the dependency instructions and comments in each Perl script to execute analysis steps!
+
+Step 0: filtering BAM files by corresponding VCF files, converting VCF files into BED maps
+
+Step 1: creating a table that provides detailed information on paired clustered mutations and the distances between them, specifically for mutations located on the same read and on different reads
+
+Step 2: creating a tabix indexes of trinucleotide positions in the reference genome
+
+Step 3: summarizing information on clustered trinucleotide mutated patterns and the distances between them, for mutations found on both the same and different reads, separately
+
+Step 4: summarizing clustered trinucleotide mutated patterns and the distances between them by IUPAC consensus sets
