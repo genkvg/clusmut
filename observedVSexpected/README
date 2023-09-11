@@ -1,1 +1,17 @@
+The analysis consists of 7 steps. To perform analysis, the user should prepare filtered VCF files using the alignability map of the human genome from the UCSC browser (https://genome.ucsc.edu/cgi-bin/hgFileUi?db=hg19&g=wgEncodeMapability) with the length of K-mer equal to 75 bp (wgEncodeCrgMapabilityAlign75mer).
 
+Follow the dependency instructions and comments in each Perl script to execute analysis steps.
+
+Step 0: selecting 'PASS' SNP variants and filtering out MNP variants from VCF files
+
+Step 1: converting VCF files into BED map of mutated positions and FASTA file of mutated trinucleotides
+
+Step 2: preparing a TSV file for subsequent analyses
+
+Step 3: producing a table that contains the numbers of two observed clustered trinucleotide mutated patterns and the distances between them
+
+Step 4: randomizing (via random permutation) tumor labels for mutated trinucleotide patterns
+
+Step 5: summarizing observed clustered trinucleotide mutated patterns and the distances between them by IUPAC consensus sets
+
+Step 6: summarizing expected (permuted) clustered trinucleotide mutated patterns and the distances between them by IUPAC consensus sets
