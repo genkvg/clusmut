@@ -1,1 +1,15 @@
+The analysis consists of 6 steps. To perform analysis, the user should prepare filtered VCF files using the alignability map of the human genome from the UCSC browser (https://genome.ucsc.edu/cgi-bin/hgFileUi?db=hg19&g=wgEncodeMapability) with the length of K-mer equal to 75 bp (wgEncodeCrgMapabilityAlign75mer).
 
+Follow the dependency instructions and comments in each Perl script to execute analysis steps!
+
+Step 0: this step is similar to step 2 of the 'sameReadMutVSdifferentReadsMut' pipeline - creating a tabix indexes of trinucleotide positions in the reference genome
+
+Step 1: creating position indexes for 64 trinucleotides types
+
+Step 2: selection of random trinucleotides located in the vicinity of a mutated trinucleotide and production of pseudo-VCF files using this procedure; random and mutated trinucleotides must be of the same type; one of the input files (toPERM.tsv) is generated on the step 2 of the 'observedVSexpected' pipeline; this step requires around 200GB of RAM, so be careful
+
+Step 3: creating a table that displays the distances between the closest diucleotides and mutated trinucleotides (random (expected) trinucleotides data)
+
+Step 4: creating a table that displays the distances between the closest diucleotides and mutated trinucleotides (real (observed) trinucleotides data)
+
+Step 5: comparing the tables obtained in two previous steps; calculating mean distances
